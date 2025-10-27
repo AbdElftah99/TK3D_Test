@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>TK3D_Test</Name>
+		<Assembly>C:\TK3D_Test\TK3D_Test.dll</Assembly> // the path at revit directory
+		<FullClassName>TK3D_Test.Application.Application</FullClassName>
+		<ClientId>F1B3032D-19BD-4585-B996-2C0289A66EC4</ClientId>
+		<VendorId>DummyVendorId</VendorId>
+		<VendorDescription>DummyDescription</VendorDescription>
+		<Text>Demo</Text>
+		<Description>Sample</Description>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+	</AddIn>
+</RevitAddIns>

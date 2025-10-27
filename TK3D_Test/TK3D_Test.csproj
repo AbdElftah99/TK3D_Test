@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<LangVersion>latest</LangVersion>
+		<ApplicationManifest>Application\TK3D_Test.addin</ApplicationManifest>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <AdditionalFiles Remove="Application\MPINewAddins.addin" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Libraries\" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="2023.1.80" />
+		<PackageReference Include="Nice3point.Revit.Toolkit" Version="2023.3.0" />
+		<PackageReference Include="RevitTask" Version="3.0.0" />
+		<PackageReference Include="WPF-UI" Version="3.0.5" />
+	</ItemGroup>
+	
+	
+	<ItemGroup>
+		<Reference Include="RevitAPI">
+			<HintPath>Libraries\R23\RevitAPI.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+
+		<Reference Include="RevitAPIUI">
+			<HintPath>Libraries\R23\RevitAPIUI.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+	
+	
+	<ItemGroup>
+	  <Resource Include="Resources\house.png" />
+	</ItemGroup>
+
+	
+	<PropertyGroup>
+		<Path>C:\TK3D_Test</Path>
+	</PropertyGroup>
+
+	<!-- Debug Options-->
+	<PropertyGroup>
+		<PostBuildEvent>
+			mkdir "$(Path)" 2&gt;NUL
+			if exist "$(AppData)\Autodesk\Revit\Addins\2023" copy "$(ProjectDir)\Application\TK3D_Test.addin" "$(AppData)\Autodesk\REVIT\Addins\2023"
+			if exist "$(Path)" copy "$(ProjectDir)$(OutputPath)*" "$(Path)"
+		</PostBuildEvent>
+
+		<StartAction>Program</StartAction>
+		<StartProgram>C:\Program Files\Autodesk\Revit 2023\Revit.exe</StartProgram>
+		<UserSecretsId>c19ba5b5-1f33-454d-9c45-4f9daf21022c</UserSecretsId>
+		<ApplicationManifest>Application\TK3D_Test.addin</ApplicationManifest>
+	</PropertyGroup>
+	<!---->
+</Project>
