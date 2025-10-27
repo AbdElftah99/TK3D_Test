@@ -3,7 +3,8 @@
 **TK3D_Test** is a demo application that showcases how to **automatically create architectural elements** using the **Revit API**.  
 The project demonstrates modern development practices such as **MVVM architecture**, **WPF UI design**, and **Community Toolkit** integration — providing a structured and maintainable foundation for Revit-based automation tools.
 
-<img width="288" height="262" alt="image" src="https://github.com/user-attachments/assets/74e82a29-730c-49a7-90f7-934b5318ca6b" />
+<img width="458" height="337" alt="image" src="https://github.com/user-attachments/assets/e8ba0319-745d-44c3-bb24-24a9a5ea0ca4" />
+
 
 
 ---
