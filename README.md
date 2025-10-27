@@ -46,7 +46,4 @@ TK3D_Test/
 - .NET Framework 4.8 or later
 - Revit API SDK (included with Revit installation)
 
-### Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/TK3D_Test.git
+
